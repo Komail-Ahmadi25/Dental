@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>کلینیک دندانپزشکی سولید</title>
+    <link rel="stylesheet" href="../fontawesome-free-5.15.4-web/css/all.min.css">
+    <link rel="stylesheet" href="../src/output.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0ea5e9',
+                        secondary: '#64748b',
+                        accent: '#06b6d4',
+                    },
+                    fontFamily: {
+                        vazir: ['Vazirmatn', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-gradient {
+                @apply bg-gradient-to-r from-blue-500 to-cyan-500 bg-clip-text text-transparent;
+            }
+        }
+    </style>
+</head>
+
+<body class="font-vazir bg-gray-50 text-gray-800">
+    <!-- هدر -->
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <div
+                    class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-xl">
+                    S</div>
+                <h1 class="mr-3 text-2xl font-bold text-blue-600">کلینیک دندانپزشکی سولید</h1>
+            </div>
+
+            <nav class="hidden md:flex space-x-2 space-x-reverse">
+                <a href="#" class="px-4 py-2 text-gray-600 hover:text-blue-500 transition">خانه</a>
+                <a href="#" class="px-4 py-2 text-gray-600 hover:text-blue-500 transition">خدمات</a>
+                <a href="#" class="px-4 py-2 text-gray-600 hover:text-blue-500 transition">درباره ما</a>
+                <a href="#" class="px-4 py-2 text-gray-600 hover:text-blue-500 transition">تماس با ما</a>
+            </nav>
+
+            <button class="md:hidden text-gray-600">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- بخش هیرو -->
+    <section class="bg-gradient-to-r from-blue-400 to-cyan-400 text-white py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">سلامتی لبخند شما، مأموریت ماست</h2>
+            <p class="text-xl mb-8">با جدیدترین تکنولوژی‌های دندانپزشکی برای خدمت به شما آماده‌ایم</p>
+            <button
+                class="bg-white text-blue-600 px-8 py-3 rounded-full font-bold shadow-lg hover:bg-gray-100 transition">نوبت
+                گیری آنلاین</button>
+        </div>
+    </section>
+
+    <!-- بخش خدمات -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gradient">خدمات تخصصی ما</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- کارت ایمپلنت -->
+                <div
+                    class="bg-gray-50 rounded-xl shadow-md overflow-hidden transition-transform duration-300 hover:shadow-lg hover:-translate-y-2">
+                    <div class="h-48 bg-gradient-to-r from-blue-100 to-cyan-100 flex items-center justify-center">
+                        <i class="fas fa-tooth text-6xl text-blue-500"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-blue-600">ایمپلنت دندان</h3>
+                        <p class="text-gray-600 mb-4">ایمپلنت‌های دندانی پیچ‌های مصنوعی ساخته شده از تیتانیوم یا اکسید
+                            زیرکونیوم هستند که استخوان فک و ترمیم دندان مانند تاج یا دندان مصنوعی را به هم متصل می‌کنند.
+                        </p>
+                        <a href="#" class="text-blue-500 font-semibold flex items-center">
+                            اطلاعات بیشتر
+                            <i class="fas fa-arrow-left mr-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- کارت پرکردن دندان -->
+                <div
+                    class="bg-gray-50 rounded-xl shadow-md overflow-hidden transition-transform duration-300 hover:shadow-lg hover:-translate-y-2">
+                    <div class="h-48 bg-gradient-to-r from-cyan-100 to-blue-100 flex items-center justify-center">
+                        <i class="fas fa-teeth text-6xl text-cyan-500"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-cyan-600">پرکردن دندان</h3>
+                        <p class="text-gray-600 mb-4">با ما، شما حتی متوجه نخواهید شد که بدون آمالگام قدیمی یا
+                            پرکردن‌های نقره‌ای گذشته، حفره‌هایی داشته‌اید. خدمات دندانپزشکی زیبایی پرکردن دندان‌های رنگی
+                            کلینیک دندانپزشکی سولید پیشرفت زیادی در زیبایی دندان‌های شما ایجاد می‌کند.</p>
+                        <a href="#" class="text-cyan-500 font-semibold flex items-center">
+                            اطلاعات بیشتر
+                            <i class="fas fa-arrow-left mr-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- کارت درمان لثه -->
+                <div
+                    class="bg-gray-50 rounded-xl shadow-md overflow-hidden transition-transform duration-300 hover:shadow-lg hover:-translate-y-2">
+                    <div class="h-48 bg-gradient-to-r from-blue-100 to-cyan-100 flex items-center justify-center">
+                        <i class="fas fa-teeth-open text-6xl text-blue-500"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-blue-600">درمان لثه</h3>
+                        <p class="text-gray-600 mb-4">کلینیک دندانپزشکی سولید به شما توصیه می‌کند هر زمان که شاهد هرگونه
+                            علائم بیماری لثه از جمله تنفس بد، لثه‌های قرمز، متورم و خونریزی دهان، زخم‌های دهان،
+                            عقب‌نشینی خط لثه، چرک ناشی از لثه و دندان‌هایی که به نظر می‌رسد شل هستند، به دندانپزشک
+                            مراجعه کنید.</p>
+                        <a href="#" class="text-blue-500 font-semibold flex items-center">
+                            اطلاعات بیشتر
+                            <i class="fas fa-arrow-left mr-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- کارت دندانپزشکی کودکان -->
+                <div
+                    class="bg-gray-50 rounded-xl shadow-md overflow-hidden transition-transform duration-300 hover:shadow-lg hover:-translate-y-2">
+                    <div class="h-48 bg-gradient-to-r from-cyan-100 to-blue-100 flex items-center justify-center">
+                        <i class="fas fa-baby text-6xl text-cyan-500"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-cyan-600">دندانپزشکی کودکان</h3>
+                        <p class="text-gray-600 mb-4">ما خوشحالیم که شما و کوچولوهایتان را در کلینیک‌های خود ببینیم. ما
+                            سخت کار می‌کنیم تا هر بار مراجعه به دندانپزشکی سرگرم‌کننده و متناسب با کودک باشد، زیرا
+                            معتقدیم که تجربیات مثبت دندانپزشکی در دوران کودکی پایه‌ای از سلامت دهان و دندان ایجاد می‌کند
+                            و نباید یک تجربه ترسناک برای کودک شما باشد.</p>
+                        <a href="#" class="text-cyan-500 font-semibold flex items-center">
+                            اطلاعات بیشتر
+                            <i class="fas fa-arrow-left mr-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- کارت درمان ریشه -->
+                <div
+                    class="bg-gray-50 rounded-xl shadow-md overflow-hidden transition-transform duration-300 hover:shadow-lg hover:-translate-y-2">
+                    <div class="h-48 bg-gradient-to-r from-blue-100 to-cyan-100 flex items-center justify-center">
+                        <i class="fas fa-tooth text-6xl text-blue-500"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-blue-600">درمان ریشه</h3>
+                        <p class="text-gray-600 mb-4">کلینیک دندانپزشکی سولید تخصصی در درمان کانال ریشه دارد و با موفقیت
+                            لبخندهای بی‌شماری را بازیابی کرده است. دندان‌ها و آسیاب‌ها از یک تاج و یک ریشه تشکیل
+                            شده‌اند. تاج قسمتی است که در بالای لثه قابل مشاهده است. ریشه در فک زیرین محکم شده است.</p>
+                        <a href="#" class="text-blue-500 font-semibold flex items-center">
+                            اطلاعات بیشتر
+                            <i class="fas fa-arrow-left mr-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- کارت بریج دندان -->
+                <div
+                    class="bg-gray-50 rounded-xl shadow-md overflow-hidden transition-transform duration-300 hover:shadow-lg hover:-translate-y-2">
+                    <div class="h-48 bg-gradient-to-r from-cyan-100 to-blue-100 flex items-center justify-center">
+                        <i class="fas fa-teeth text-6xl text-cyan-500"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-cyan-600">بریج دندان</h3>
+                        <p class="text-gray-600 mb-4">در برخی موارد دندان‌های شما نیاز به ترمیم دارند، به عنوان مثال پس
+                            از شکستگی دندان/آسیاب یا حفره‌های بزرگ. اغلب دیگر امکان قرار دادن پرکردگی یا فیسینگ در چنین
+                            مواردی وجود ندارد، تاج پورسلین راه حل است.</p>
+                        <a href="#" class="text-cyan-500 font-semibold flex items-center">
+                            اطلاعات بیشتر
+                            <i class="fas fa-arrow-left mr-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- بخش تماس -->
+    <section class="py-16 bg-gradient-to-r from-blue-500 to-cyan-500 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">آماده‌ایم تا به شما خدمت کنیم</h2>
+            <p class="text-xl mb-8">برای دریافت نوبت یا مشاوره رایگان با ما تماس بگیرید</p>
+            <div class="flex flex-col md:flex-row justify-center items-center gap-6">
+                <a href="tel:+982112345678"
+                    class="bg-white text-blue-600 px-6 py-3 rounded-full font-bold shadow-lg hover:bg-gray-100 transition flex items-center">
+                    <i class="fas fa-phone ml-2"></i>
+                    ۰۲۱-۱۲۳۴۵۶۷۸
+                </a>
+                <a href="https://wa.me/989121234567"
+                    class="bg-white text-blue-600 px-6 py-3 rounded-full font-bold shadow-lg hover:bg-gray-100 transition flex items-center">
+                    <i class="fab fa-whatsapp ml-2 text-green-500"></i>
+                    واتس‌اپ
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- فوتر -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">کلینیک دندانپزشکی سولید</h3>
+                    <p class="text-gray-400">ارائه بهترین خدمات دندانپزشکی با جدیدترین تکنولوژی‌ها و کادری مجرب</p>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold mb-4">لینک‌های سریع</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">خدمات</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">درباره ما</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">تماس با ما</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">وبلاگ</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold mb-4">تماس با ما</h3>
+                    <address class="text-gray-400 not-italic">
+                        <p class="flex items-center mb-2">
+                            <i class="fas fa-map-marker-alt ml-2"></i>
+                            تهران، خیابان ولیعصر، پلاک ۱۲۳
+                        </p>
+                        <p class="flex items-center mb-2">
+                            <i class="fas fa-phone ml-2"></i>
+                            ۰۲۱-۱۲۳۴۵۶۷۸
+                        </p>
+                        <p class="flex items-center">
+                            <i class="fas fa-envelope ml-2"></i>
+                            info@soliclinic.ir
+                        </p>
+                    </address>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
