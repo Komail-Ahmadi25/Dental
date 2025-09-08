@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard (One Page)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body class="bg-gray-100 transition-colors duration-300" id="body">
+
+    <div class="flex min-h-screen">
+        <!-- Sidebar -->
+        <aside id="sidebar"
+            class="w-64 bg-white shadow-md fixed md:static inset-y-0 left-0 transform -translate-x-full md:translate-x-0 transition-transform duration-300">
+            <div class="p-6 text-2xl font-bold text-blue-600">Dashboard</div>
+            <nav class="mt-6">
+                <button data-page="overview" class="w-full text-left py-2.5 px-4 bg-blue-100 font-semibold">📊
+                    Overview</button>
+                <button data-page="users" class="w-full text-left py-2.5 px-4 hover:bg-blue-100">👥 Users</button>
+                <button data-page="sales" class="w-full text-left py-2.5 px-4 hover:bg-blue-100">💰 Sales</button>
+                <button data-page="settings" class="w-full text-left py-2.5 px-4 hover:bg-blue-100">⚙ Settings</button>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-6 md:ml-64">
+            <!-- Top Navbar -->
+            <header class="flex justify-between items-center mb-6">
+                <button id="menuBtn" class="md:hidden px-4 py-2 bg-blue-600 text-white rounded-lg">☰</button>
+                <input type="text" placeholder="Search..." class="px-4 py-2 border rounded-lg w-1/3 hidden md:block">
+                <div class="flex items-center gap-4">
+                    <button id="darkToggle" class="px-3 py-2 bg-gray-200 rounded-lg">🌙</button>
+                    <span class="text-gray-600">Hello, Komail 👋</span>
+                    <img src="https://i.pravatar.cc/40" class="w-10 h-10 rounded-full" alt="profile">
+                </div>
+            </header>
+
+            <!-- Pages -->
+            <div id="pages">
+                <!-- Overview -->
+                <section id="overview" class="page">
+                    <h1 class="text-2xl font-bold mb-4">📊 Overview</h1>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
+                        <div class="bg-white p-6 rounded-xl shadow-md">
+                            <h2 class="text-gray-600">Users</h2>
+                            <p class="text-2xl font-bold">1,234</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-md">
+                            <h2 class="text-gray-600">Sales</h2>
+                            <p class="text-2xl font-bold">$9,876</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-md">
+                            <h2 class="text-gray-600">Revenue</h2>
+                            <p class="text-2xl font-bold">$45,678</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-md">
+                            <h2 class="text-gray-600">Growth</h2>
+                            <p class="text-2xl font-bold">+12%</p>
+                        </div>
+                    </div>
+                    <section class="bg-white p-6 rounded-xl shadow-md mb-6">
+                        <h2 class="text-xl font-bold mb-4">Sales Overview</h2>
+                        <canvas id="salesChart"></canvas>
+                    </section>
+                </section>
+
+                <!-- Users -->
+                <section id="users" class="page hidden">
+                    <h1 class="text-2xl font-bold mb-4">👥 Users</h1>
+                    <div class="bg-white p-6 rounded-xl shadow-md">
+                        <table class="w-full border-collapse">
+                            <thead>
+                                <tr class="bg-gray-200 text-left">
+                                    <th class="p-3">Name</th>
+                                    <th class="p-3">Email</th>
+                                    <th class="p-3">Role</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b">
+                                    <td class="p-3">Komail</td>
+                                    <td class="p-3">komail@example.com</td>
+                                    <td class="p-3">Admin</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="p-3">Ali</td>
+                                    <td class="p-3">ali@example.com</td>
+                                    <td class="p-3">Editor</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3">Sara</td>
+                                    <td class="p-3">sara@example.com</td>
+                                    <td class="p-3">User</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- Sales -->
+                <section id="sales" class="page hidden">
+                    <h1 class="text-2xl font-bold mb-4">💰 Sales</h1>
+                    <div class="bg-white p-6 rounded-xl shadow-md mb-6">
+                        <h2 class="text-xl font-bold mb-4">Monthly Revenue</h2>
+                        <canvas id="revenueChart"></canvas>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md">
+                        <h2 class="text-xl font-bold mb-4">Products</h2>
+                        <table class="w-full border-collapse">
+                            <thead>
+                                <tr class="bg-gray-200 text-left">
+                                    <th class="p-3">Product</th>
+                                    <th class="p-3">Price</th>
+                                    <th class="p-3">Sold</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b">
+                                    <td class="p-3">Laptop</td>
+                                    <td class="p-3">$1200</td>
+                                    <td class="p-3">15</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="p-3">Phone</td>
+                                    <td class="p-3">$800</td>
+                                    <td class="p-3">25</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3">Headphones</td>
+                                    <td class="p-3">$150</td>
+                                    <td class="p-3">40</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- Settings -->
+                <section id="settings" class="page hidden">
+                    <h1 class="text-2xl font-bold mb-4">⚙ Settings</h1>
+                    <div class="bg-white p-6 rounded-xl shadow-md max-w-lg">
+                        <form class="space-y-4">
+                            <div>
+                                <label class="block mb-1 font-medium">Name</label>
+                                <input type="text" class="w-full border px-3 py-2 rounded-lg" value="Komail">
+                            </div>
+                            <div>
+                                <label class="block mb-1 font-medium">Email</label>
+                                <input type="email" class="w-full border px-3 py-2 rounded-lg"
+                                    value="komail@example.com">
+                            </div>
+                            <div>
+                                <label class="block mb-1 font-medium">Password</label>
+                                <input type="password" class="w-full border px-3 py-2 rounded-lg" value="123456">
+                            </div>
+                            <button type="submit" class="px-4 py-2 bg-blue-600 text-white rounded-lg">Save
+                                Changes</button>
+                        </form>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Sidebar toggle
+        const menuBtn = document.getElementById("menuBtn"), sidebar = document.getElementById("sidebar");
+        menuBtn.addEventListener("click", () => sidebar.classList.toggle("-translate-x-full"));
+
+        // Dark mode
+        const body = document.getElementById("body"), darkToggle = document.getElementById("darkToggle");
+        if (localStorage.getItem("theme") === "dark") { body.classList.replace("bg-gray-100", "bg-gray-900"); darkToggle.textContent = "☀️"; }
+        darkToggle.addEventListener("click", () => { if (body.classList.contains("bg-gray-900")) { body.classList.replace("bg-gray-900", "bg-gray-100"); localStorage.setItem("theme", "light"); darkToggle.textContent = "🌙"; } else { body.classList.replace("bg-gray-100", "bg-gray-900"); localStorage.setItem("theme", "dark"); darkToggle.textContent = "☀️"; } });
+
+        // Page navigation
+        const buttons = document.querySelectorAll("[data-page]"), pages = document.querySelectorAll(".page");
+        buttons.forEach(btn => { btn.addEventListener("click", () => { pages.forEach(p => p.classList.add("hidden")); document.getElementById(btn.dataset.page).classList.remove("hidden"); buttons.forEach(b => b.classList.remove("bg-blue-100", "font-semibold")); btn.classList.add("bg-blue-100", "font-semibold"); }); });
+
+        // Charts
+        new Chart(document.getElementById("salesChart"), { type: "line", data: { labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"], datasets: [{ label: "Sales ($)", data: [1200, 1900, 3000, 2500, 3200, 4000], borderColor: "blue", backgroundColor: "rgba(0,0,255,0.1)", tension: 0.3, fill: true }] } });
+        new Chart(document.getElementById("revenueChart"), { type: "bar", data: { labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"], datasets: [{ label: "Revenue ($)", data: [5000, 7000, 8000, 6500, 9000, 11000], backgroundColor: "rgba(0,0,255,0.5)" }] } });
+
+    </script>
+</body>
+
+</html>
